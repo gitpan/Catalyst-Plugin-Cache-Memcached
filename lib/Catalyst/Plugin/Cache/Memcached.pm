@@ -3,7 +3,7 @@ package Catalyst::Plugin::Cache::Memcached;
 use strict;
 use base 'Class::Data::Inheritable';
 
-our $VERSION='0.5';
+our $VERSION='0.6';
 
 use Cache::Memcached;
 
