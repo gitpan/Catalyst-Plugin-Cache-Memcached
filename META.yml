@@ -1,18 +1,19 @@
 ---
+name: Catalyst-Plugin-Cache-MemCached
+version: 0.5
+author:
+  - |-
+    Christian Hansen, C<ch@ngmedia.com>
+    Sebastian Riedel C<sri@oook.de>
 abstract: Distributed cache
-author: 'Christian Hansen, C<ch@ngmedia.com>'
-distribution_type: module
-generated_by: Module::Install version 0.67
 license: perl
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
-name: Catalyst-Plugin-Cache-Memcached
-no_index:
-  directory:
-    - inc
-    - t
 requires:
-  Cache::Memcached: 0
-  Catalyst::Runtime: 5.7006
-version: 0.71
+  Cache::MemCached: 0
+provides:
+  Cache::Memcached:
+    file: lib/Catalyst/Plugin/Cache/MemCached.pm
+    version: 0.5
+  Catalyst::Plugin::Cache::MemCached:
+    file: lib/Catalyst/Plugin/Cache/MemCached.pm
+    version: 0.5
+generated_by: Module::Build version 0.26

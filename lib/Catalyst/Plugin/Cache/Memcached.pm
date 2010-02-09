@@ -3,7 +3,7 @@ package Catalyst::Plugin::Cache::Memcached;
 use strict;
 use base 'Class::Data::Inheritable';
 
-our $VERSION='0.71';
+our $VERSION='0.8';
 
 use Cache::Memcached;
 
@@ -35,7 +35,7 @@ __END__
 
 =head1 NAME
 
-Catalyst::Plugin::Cache::Memcached - Distributed cache
+Catalyst::Plugin::Cache::Memcached - [DEPRECATED] Distributed cache
 
 =head1 SYNOPSIS
 
@@ -58,6 +58,10 @@ Catalyst::Plugin::Cache::Memcached - Distributed cache
 
 Extends base class with a distributed cache.
 
+Note: This plugin is deprecated and is just maintained for backwards
+compatibility. You should configure C<Catalyst::Plugin::Cache> directly
+as documented, rather than using this module.
+
 =head1 METHODS
 
 =over 4
@@ -65,6 +69,10 @@ Extends base class with a distributed cache.
 =item cache
 
 Returns an instance of C<Cache::Memcached>
+
+=item setup
+
+Wraps Catalyst's setup method to setup the L<Cache::Memcached> instance.
 
 =back
 
